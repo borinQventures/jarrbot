@@ -1,0 +1,23 @@
+{
+  "id": "generic-webhook",
+  "channels": ["generic-webhook"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "inboundToken": {
+        "type": "string",
+        "description": "Secret token required for inbound webhooks."
+      },
+      "outboundUrl": {
+        "type": "string",
+        "description": "URL to POST outbound messages to."
+      },
+      "outboundToken": {
+        "type": "string",
+        "description": "Authorization bearer token to include in outbound requests."
+      }
+    },
+    "required": ["inboundToken", "outboundUrl"]
+  }
+}

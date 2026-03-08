@@ -1,0 +1,41 @@
+{
+  "name": "@openclaw/generic-webhook",
+  "version": "2026.3.3",
+  "private": true,
+  "description": "Custom OpenClaw Generic Webhook Channel Plugin",
+  "type": "module",
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.3.3"
+  },
+  "peerDependenciesMeta": {
+    "openclaw": {
+      "optional": true
+    }
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "channel": {
+      "id": "generic-webhook",
+      "label": "Generic Webhook",
+      "selectionLabel": "Generic HTTP Webhook",
+      "detailLabel": "Generic Webhook",
+      "docsLabel": "generic",
+      "blurb": "A flexible, generic HTTP webhook channel that can be adapted to any platform.",
+      "aliases": [
+        "webhook",
+        "custom"
+      ],
+      "order": 99
+    },
+    "install": {
+      "npmSpec": "@openclaw/generic-webhook",
+      "localPath": "extensions/generic-webhook",
+      "defaultChoice": "local"
+    }
+  }
+}
